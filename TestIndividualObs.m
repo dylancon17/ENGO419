@@ -1,0 +1,54 @@
+function [obs] = TestIndividualObs(obs,a,b,significance)
+%UNTITLED4 Summary of this function goes here
+%   Detailed explanation goes here
+means = mean(obs,1,"omitnan");
+
+n = height(obs) * ones(1,width(obs));
+residuals = zeros(height(obs),width(obs));
+for i = 1:height(obs)
+    for j = 1:width(obs)
+        if isnan(obs(i,j))
+            n(1,j) = n(1,j) - 1;
+            residuals(i,j) = NaN;
+        else
+            residuals(i,j) = obs(i,j) - means(1,j);
+        end
+    end
+end
+
+if b==0
+    obsSD = a.*ones(5,6);
+else
+    obsSDdistance = (obs .* b) ./ 1000000;
+    obsSDfixed = a / 1000 * ones(5,3);
+    obsSD = obsSDdistance + obsSDfixed;
+end
+
+
+
+alpha = (1- significance/2);
+Z = icdf('Normal', alpha, 0, 1);
+
+blunderDetected = zeros(height(obs),width(obs));
+yMatrix = zeros(height(obs),width(obs));
+
+
+for i = 1:height(obs)
+    for j = 1:width(obs)
+        nObs = n(1,j);
+        temp = sqrt((nObs-1)/nObs)*obsSD(i,j);
+        y = residuals(i,j) / temp;
+        if abs(y) > Z
+            blunderDetected(i,j) = 1;
+            obs(i,j) = NaN;
+        end
+        yMatrix(i,j) = y;
+    end
+end
+disp("Results of Testing Individual Observations")
+residuals
+obsSD
+Z
+yMatrix
+blunderDetected
+end

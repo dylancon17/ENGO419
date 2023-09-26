@@ -1,0 +1,28 @@
+means = mean(obs,1,"omitnan");
+
+n = height(obs) .* ones(1,width(obs));
+for i = 1:height(obs)
+    for j = 1:width(obs)
+        if isnan(obs(i,j))
+            n(1,j) = n(1,j) - 1;
+        end
+    end
+end
+
+
+meanVar = mean(obsVar,1,"omitnan") ./ n;
+
+misclosure = sqrt(means(1,1)^2+means(1,2)^2)-means(1,3);
+misclosureVar = sum(meanVar);
+misclosureSD = sqrt(misclosureVar);
+
+y_pop = misclosure / misclosureSD;
+
+alpha = (1- significance/2);
+Z = icdf('Normal', alpha, 0, 1);
+
+if abs(y_pop) < Z
+    disp("Misclosure Test Passed");
+else
+    disp("Misclosure Test Failed");
+end

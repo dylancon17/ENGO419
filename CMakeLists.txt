@@ -3,4 +3,4 @@ project(ENGO_419)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ENGO_419 main.cpp CovarianceMatrices.h CovarianceMatrices.cpp)
+add_executable(ENGO_419 main.cpp CovarianceMatrices.h CovarianceMatrices.cpp MatrixIO.h MatrixIO.cpp)

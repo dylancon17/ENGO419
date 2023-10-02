@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/ENGO419/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target ENGO_419
 
@@ -49,14 +49,20 @@ cmake_ninja_workdir = C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/Schoo
 
 build cmake_object_order_depends_target_ENGO_419: phony || CMakeFiles/ENGO_419.dir
 
-build CMakeFiles/ENGO_419.dir/main.cpp.obj: CXX_COMPILER__ENGO_419_Debug C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/main.cpp || cmake_object_order_depends_target_ENGO_419
+build CMakeFiles/ENGO_419.dir/main.cpp.obj: CXX_COMPILER__ENGO_419_Debug C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/ENGO419/main.cpp || cmake_object_order_depends_target_ENGO_419
   DEP_FILE = CMakeFiles\ENGO_419.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ENGO_419.dir
   OBJECT_FILE_DIR = CMakeFiles\ENGO_419.dir
 
-build CMakeFiles/ENGO_419.dir/CovarianceMatrices.cpp.obj: CXX_COMPILER__ENGO_419_Debug C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/CovarianceMatrices.cpp || cmake_object_order_depends_target_ENGO_419
+build CMakeFiles/ENGO_419.dir/CovarianceMatrices.cpp.obj: CXX_COMPILER__ENGO_419_Debug C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/ENGO419/CovarianceMatrices.cpp || cmake_object_order_depends_target_ENGO_419
   DEP_FILE = CMakeFiles\ENGO_419.dir\CovarianceMatrices.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\ENGO_419.dir
+  OBJECT_FILE_DIR = CMakeFiles\ENGO_419.dir
+
+build CMakeFiles/ENGO_419.dir/MatrixIO.cpp.obj: CXX_COMPILER__ENGO_419_Debug C$:/Users/conle/OneDrive$ -$ University$ of$ Calgary/School/Fall$ 23/ENGO$ 419/ENGO419/MatrixIO.cpp || cmake_object_order_depends_target_ENGO_419
+  DEP_FILE = CMakeFiles\ENGO_419.dir\MatrixIO.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ENGO_419.dir
   OBJECT_FILE_DIR = CMakeFiles\ENGO_419.dir
@@ -69,7 +75,7 @@ build CMakeFiles/ENGO_419.dir/CovarianceMatrices.cpp.obj: CXX_COMPILER__ENGO_419
 #############################################
 # Link the executable ENGO_419.exe
 
-build ENGO_419.exe: CXX_EXECUTABLE_LINKER__ENGO_419_Debug CMakeFiles/ENGO_419.dir/main.cpp.obj CMakeFiles/ENGO_419.dir/CovarianceMatrices.cpp.obj
+build ENGO_419.exe: CXX_EXECUTABLE_LINKER__ENGO_419_Debug CMakeFiles/ENGO_419.dir/main.cpp.obj CMakeFiles/ENGO_419.dir/CovarianceMatrices.cpp.obj CMakeFiles/ENGO_419.dir/MatrixIO.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ENGO_419.dir
@@ -84,7 +90,7 @@ build ENGO_419.exe: CXX_EXECUTABLE_LINKER__ENGO_419_Debug CMakeFiles/ENGO_419.di
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\ENGO419\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -95,7 +101,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419" -B"C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\ENGO419\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\ENGO419" -B"C:\Users\conle\OneDrive - University of Calgary\School\Fall 23\ENGO 419\ENGO419\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -113,7 +119,7 @@ build ENGO_419: phony ENGO_419.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/conle/OneDrive - University of Calgary/School/Fall 23/ENGO 419/cmake-build-debug
+# Folder: C:/Users/conle/OneDrive - University of Calgary/School/Fall 23/ENGO 419/ENGO419/cmake-build-debug
 
 build all: phony ENGO_419.exe
 
